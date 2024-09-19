@@ -11,7 +11,7 @@ const app = new Vue({
         async getStocks() {
             try {
 
-                const url = `${import.meta.env.VITE_BACKEND_URL}/api/getStocks`;
+                const url = `${import.meta.env.BACKEND_URL}/api/getStocks`;
                 console.log('Fetching stocks from ', url);
 
                 const response = await fetch(url);
@@ -31,7 +31,7 @@ const app = new Vue({
 
 const connect = () => {
 
-    const signalR_URL = `${import.meta.env.VITE_BACKEND_URL}/api`;
+    const signalR_URL = `${import.meta.env.BACKEND_URL}/api`;
     console.log(`Connecting to SignalR...${signalR_URL}`)
 
     const connection = new signalR.HubConnectionBuilder()
